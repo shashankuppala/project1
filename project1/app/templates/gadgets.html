@@ -1,0 +1,23 @@
+<div ng-controller="gadgetsController">
+	hi {{user.lastName}}, select the favourite gadget.
+	<input type="text" ng-model="search"/>
+	<table class="table">
+	<thead>
+		<tr>
+			<th>Company</th>
+			<th>Name</th>
+			<th>version</th>
+			<th>price</th>
+		</tr>	
+	</thead>
+	<tbody>
+		<tr class="active" ng-repeat="gadget in gadgets |filter:search">
+			<td>{{gadget.name | uppercase}}</td>
+			<td>{{gadget.company|lowercase}}</td>
+			<td>{{gadget.version}}</td>
+			<td>{{gadget.price|currency:'USD$'}}</td>
+		</tr>	
+	</tbody>	
+	</table>
+
+</div>

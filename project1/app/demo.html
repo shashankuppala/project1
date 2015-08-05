@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	  <title>Angular demo</title>
+  	  <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  	  <script src="values/angular.min.js"></script>
+      <script src="values/jquery-ui.min.js"></script>
+      <script src="values/angular-ui-router.js"></script>
+  	  <script src="app.js"></script>
+
+      <script src="controllers/registerController.js"></script>
+      <script src="controllers/gadgetsController.js"></script>
+      <script src="controllers/menuController.js"></script>
+      <script src="controllers/homeController.js"></script>
+      <script src="services/gadgetServices.js"></script>
+      <script src="directives/showHide.js"></script>
+      <script src="directives/customGrid.js"></script>
+      <style type="text/css">
+          .bs-example{
+            margin:20px;
+          }
+      </style>
+  </head>
+  <body ng-app="myApp">
+  <div ng-controller="menuController">
+      <div ng-include="menuBarUrl"></div>
+  </div>
+  <div ui-view>
+
+  </div>
+
+
+    <div class="bs-example" ng-controller = "registerController">
+        <div ng-include="gadgetsUr"></div>
+    <div ng-include="" ng-hide = "displayWelcomePage" >
+    </div>
+        <div ng-include="gadgetsUr"></div>
+      
+        <div ng-include="gadgetsUrl" ng-show ="displayWelcomePage">
+        </div>
+      </div>
+
+
+  </body>
+</html>
+
+

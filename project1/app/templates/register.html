@@ -1,0 +1,35 @@
+<div class="form-gorup">
+        <div class="form-group">
+            <label class="sr-only" for="firstName">First Name</label>
+            <input type="text" class="form-control" ng-model="user.firstName" id="firstName" placeholder="First Name">
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="lastName">Last Name</label>
+            <input type="text" class="form-control" ng-model="user.lastName" id="lastName" placeholder="Last Name">
+        </div>
+        <div class="form-group">
+            <label class="sr-only" >Date of Birth</label>
+            <input type="text" class="form-control" ng-model="user.dob" placeholder="Date of Birth">
+        </div>
+        <div class="form-group">
+            <label class="sr-only" >Email</label>
+            <input type="text" class="form-control" ng-model="user.email" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="inputPassword">states</label>
+            <select ng-model="user.item" ng-change= "loadCity()" ng-options= "item.name for item in states">
+
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="sr-only" >City</label>
+            <input type="text" class="form-control" ng-model="user.city" placeholder="city">
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="inputPassword">Password</label>
+            <input type="password" class="form-control" ng-model="user.password" id="inputPassword" placeholder="Password">
+        </div>
+        <div>
+        <button type="submit" class="btn btn-primary" ng-click = "register()" >Login</button>
+        </div>
+</div>

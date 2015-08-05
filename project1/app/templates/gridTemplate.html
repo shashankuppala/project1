@@ -1,0 +1,17 @@
+<table class="table">
+    <thead>
+    <tr>
+        <th ng-repeat="header in headers">{{header}}</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="active" ng-repeat="item in data">
+        <td>{{$index}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.brand}}</td>
+        <td>{{item.price}}</td>
+    </tr>
+
+    </tbody>
+</table>
